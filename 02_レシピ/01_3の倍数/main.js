@@ -17,16 +17,32 @@
 
 //favorite is 3
 //------------------------------------------------//
+// const genkiFunction = function (number) {
+//   for (let n = 1; n <= number; n++) {
+//     if (n % 3 === 0) {
+//       console.log(n + "!!!!!!!!")
+//     } else if (/3/.test(n)) {
+//       console.log(n + "!!!!!!!!")
+//     } else {
+//       console.log(n)
+//     }
+//   }
+// }
+// -------------------------------------------------//
+
+//元気な秒針//
+//---------------------------------------------------//
 const genkiFunction = function (number) {
   for (let n = 1; n <= number; n++) {
     if (n % 3 === 0) {
       console.log(n + "!!!!!!!!")
-    } else if (/3/.test(n)) {
-      console.log(n + "!!!!!!!!")
     } else {
       console.log(n)
     }
+    if (n <= number) {
+      setInterval(genkiFunction, 1000000)
+    }
   }
 }
-
+//------------------------------------------------------//
 genkiFunction(100)
