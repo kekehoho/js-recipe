@@ -10,6 +10,6 @@ const figure = document.getElementById("figure")
 //   figure.classList.remove("rounded")
 // }
 
-figure.onclick = function () {
+figure.onmouseout = function () {
   figure.classList.toggle("rounded")
 }
