@@ -10,6 +10,11 @@ for (const button of buttons.children) {
   }
 }
 
+// const element1 = document.getElementById("element")
+// element1.textContent = "konnitiha"
+// element1.style.fontWeight = "bold"
+// element1.style.backgroundColor = "red"
+
 // 要素を変更する - textContent
 const elementTextContent = document.getElementById("element-textContent")
 elementTextContent.textContent = "こんばんは"
