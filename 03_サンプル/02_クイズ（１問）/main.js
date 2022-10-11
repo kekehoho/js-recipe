@@ -1,9 +1,14 @@
 const quizText = document.getElementById("quiz-text")
 const quizImage = document.getElementById("quiz-image")
-const choice1 = document.getElementById("choice-1")
-const choice2 = document.getElementById("choice-2")
-const choice3 = document.getElementById("choice-3")
-const choice4 = document.getElementById("choice-4")
+const Buttons = document.getElementById("buttons")
+// const choice1 = document.getElementById("choice-1")
+// const choice2 = document.getElementById("choice-2")
+// const choice3 = document.getElementById("choice-3")
+// const choice4 = document.getElementById("choice-4")
+const choice1 = document.createElement("button")
+const choice2 = document.createElement("button")
+const choice3 = document.createElement("button")
+const choice4 = document.createElement("button")
 const feedback = document.getElementById("feedback")
 
 // クイズの内容
@@ -49,6 +54,11 @@ const reloadQuiz = function () {
   choice4.textContent = quiz.choices[3].text
   //-----------------------------------------
 }
+
+Buttons.appendChild(choice1)
+Buttons.appendChild(choice2)
+Buttons.appendChild(choice3)
+Buttons.appendChild(choice4)
 
 // choiceNumber番目の選択肢を選択
 const choose = function (choiceNumber) {
