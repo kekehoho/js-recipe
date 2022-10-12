@@ -12,6 +12,34 @@ addButton.onclick = function () {
   inputElement.value = ""
 }
 
+//-------------------------------------------------
+// addButton.onclick = function () {
+//   const text = inputElement.value
+
+//   const card = document.createElement("div")
+//   card.className = "card"
+
+//   const todo = document.createElement("div")
+//   todo.className = "todo"
+//   todo.textContent = text
+
+//   card.append(todo)
+//   container.append(card)
+
+//   inputElement.value = ""
+
+//   const deleteButton = document.createElement("div")
+//   deleteButton.className = "delete"
+
+//   // 削除ボタンを押したときの処理を登録
+//   deleteButton.onclick = function () {
+//     // カードを削除する
+//     card.remove()
+//   }
+//   card.append(deleteButton)
+// }
+//-------------------------------------------------
+
 // 共通の処理：テキストからカードを作成する
 const createCard = function (text) {
   // カードの枠を作る
