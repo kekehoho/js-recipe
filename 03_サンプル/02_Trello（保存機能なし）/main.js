@@ -12,6 +12,19 @@ addButton.onclick = function () {
   inputElement.value = ""
 }
 
+//エンターキー
+//------------------------------------------
+//追加ボタンを押したときの処理を登録
+document.onkeydown = function (e) {
+  // カードを作成する
+  if (e.key === "Enter") {
+    const card = createCard(inputElement.value)
+    container.append(card)
+    inputElement.value = ""
+  }
+}
+//---------------------------------------------
+
 //-------------------------------------------------
 // addButton.onclick = function () {
 //   const text = inputElement.value
