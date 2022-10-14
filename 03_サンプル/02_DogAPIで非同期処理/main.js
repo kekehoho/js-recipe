@@ -1,4 +1,5 @@
 const imageElement = document.getElementById("cocktail-image")
+const button = document.getElementById("button")
 
 //指定したサーバーにデータを取りに行く
 // fetch("https://dog.ceo/api/breeds/image/random")
@@ -20,13 +21,15 @@ const imageElement = document.getElementById("cocktail-image")
 //   })
 
 //カクテル
-fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-  .then((res) => {
-    return res.json()
-  })
-  .then((data) => {
-    imageElement.src = data.drinks[0].strDrinkThumb
-  })
+button.onclick = function () {
+  fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
+    .then((res) => {
+      return res.json()
+    })
+    .then((data) => {
+      imageElement.src = data.drinks[0].strDrinkThumb
+    })
+}
 
 //ネコ
 // fetch("https://api.thecatapi.com/v1/images/search")
