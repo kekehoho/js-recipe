@@ -1,6 +1,12 @@
-const inputElement = document.getElementById("input-todo")
-const container = document.getElementById("cards-container")
-const addButton = document.getElementById("add-button")
+const inputElement = document.getElementById("input-todo1")
+const inputElement2 = document.getElementById("input-todo2")
+const inputElement3 = document.getElementById("input-todo3")
+const container = document.getElementById("geek")
+const container2 = document.getElementById("daigaku")
+const container3 = document.getElementById("kaji")
+const addButton = document.getElementById("add-button1")
+const addButton2 = document.getElementById("add-button2")
+const addButton3 = document.getElementById("add-button3")
 
 // 追加ボタンを押したときの処理を登録
 addButton.onclick = function () {
@@ -12,15 +18,41 @@ addButton.onclick = function () {
   inputElement.value = ""
 }
 
+addButton2.onclick = function () {
+  // カードを作成する
+  const card = createCard(inputElement2.value)
+  container2.append(card)
+
+  // 入力欄を空にする
+  inputElement2.value = ""
+}
+
+addButton3.onclick = function () {
+  // カードを作成する
+  const card = createCard(inputElement3.value)
+  container3.append(card)
+
+  // 入力欄を空にする
+  inputElement3.value = ""
+}
+
 //エンターキー
 //------------------------------------------
-//追加ボタンを押したときの処理を登録
+//エンターキーを押したときの処理を登録
 document.onkeydown = function (e) {
   // カードを作成する
-  if (e.key === "Enter") {
+  if (e.key === "Enter" && inputElement.value != "") {
     const card = createCard(inputElement.value)
     container.append(card)
     inputElement.value = ""
+  } else if (e.key === "Enter" && inputElement2.value != "") {
+    const card = createCard(inputElement2.value)
+    container2.append(card)
+    inputElement2.value = ""
+  } else if (e.key === "Enter" && inputElement3.value != "") {
+    const card = createCard(inputElement3.value)
+    container3.append(card)
+    inputElement3.value = ""
   }
 }
 //---------------------------------------------
